@@ -1,0 +1,288 @@
+/* Global Styles  */
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  color: #fffef4;
+  background-color: #000;
+  width: calc(100vw - (2 * var(margin)));
+  margin: 0 20px;
+}
+
+.container {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+/* 
+div.noise {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0.9;
+  z-index: 100000;
+  pointer-events: none;
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 30%, #000 70%);
+} */
+
+/* Fonts */
+
+@font-face {
+  font-family: "GTAlpina-ThIt", sans-serif;
+  src: local("GTAlpina-ThIt.woff2") url("./fonts/GTAlpina-ThIt.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "MessinaSansMono-Regular", sans-serif;
+  src: local("MessinaSansMono-Regular.woff2")
+    url("./fonts/MessinaSansMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "NeueMontreal-Bold", sans-serif;
+  src: local("NeueMontreal-Bold.woff2") url("./fonts/NeueMontreal-Bold.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "NeueMontreal-Light", sans-serif;
+  src: local("NeueMontreal-Light.woff2") url("./fonts/NeueMontreal-Light.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "NeueMontreal-Regular", sans-serif;
+  src: local("NeueMontreal-Regular.woff2")
+    url("./fonts/NeueMontreal-Regular.woff2") format("woff2");
+}
+
+h1 {
+  font-family: "NewMontreal-Bold", sans-serif;
+  text-align: center;
+  font-size: 11.4666666667vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 92%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  margin: 0;
+}
+
+h2 {
+  font-family: "NewMontreal-Bold", sans-serif;
+  line-height: 140%;
+  font-size: 1.3vw;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #929292;
+}
+
+p {
+  font-family: "NeueMontreal-Regular", sans-serif;
+  line-height: 125%;
+  font-size: 1vw;
+  letter-spacing: 0.01em;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-top: 1.1111111111vw;
+  padding-bottom: 0.5555555556vw;
+}
+
+/* trying to stop h1 from breaking  */
+div.title {
+  word-wrap: normal;
+}
+
+div.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* size the icons */
+div.icons img {
+  width: 20px;
+  margin: 2px;
+}
+
+header nav {
+  display: flex;
+  flex-basis: 120vw;
+}
+
+marquee {
+  transition: filter 0.3s ease-in-out;
+  filter: blur(1.5px);
+}
+
+marquee:hover {
+  filter: blur(0px);
+}
+
+/* marquee h2:hover {
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+} */
+
+button {
+  font-family: "NewMontreal-Bold", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 700;
+  margin: 0 0 0 20px;
+  padding: 8.4px 16.8px 8.4px 16.8px;
+  border: solid 1px #00ff6a;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  color: #00ff6a;
+  background-color: transparent;
+}
+
+div .button {
+  padding-left: 5vw;
+}
+
+.separator {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.separator-line {
+  display: flex;
+  margin: 0 0.5vw 0 0.5vw;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  height: 1px;
+  background-color: grey;
+}
+.separator-icon {
+  display: flex;
+  
+  width: 0.8333333333vw;
+  height: 0.8333333333vw;
+  fill: grey;
+}
+
+div.title {
+  width: 100%;
+  text-shadow: 0 0 10px;
+}
+
+.main {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+}
+
+div.col1,
+div.col2 {
+  min-width: 25vw;
+  border-right: solid 1px #929292;
+}
+
+div.col2,
+div.col3 {
+  padding-left: 2vw;
+}
+
+/* styling list in col1 */
+.col1-list h2 {
+  color: #fffef4;
+  font-weight: 500;
+}
+
+ul.col1-list {
+  padding-left: 0;
+}
+
+/* col 2 list of projects styling */
+.projects ul {
+  padding-left: 0;
+}
+
+.projects ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects ul li h2 {
+  color: #fffef4;
+}
+
+
+.project-accordion_icon{
+  background-color:hsla(145, 100%, 50%, 0);
+  fill:#00ff6a;
+}
+/* images in col3  */
+
+div.col3 {
+  flex-basis: 200%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.col3 img.full {
+  max-width: 50vw;
+}
+
+.col3 img.half {
+  max-width: 25vw;
+}
+
+/* space between columns (would be gap on grid) */
+.main div.col1,
+div.col2 {
+  padding-right: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+div.footer-grey {
+  color: #929292;
+}
+
+/* For mobile phones:
+@media only screen and (max-width: 800px) {
+  div.container {
+  }
+}
+
+For desktop: 
+@media only screen and (min-width: 800px) {
+  div.container {
+  }
+} */
