@@ -1,0 +1,468 @@
+* {
+  box-sizing: border-box;
+}
+
+/*------------------------------------
+        FONTS
+     ------------------------------------*/
+
+@font-face {
+  font-family: "Archivo", sans-serif;
+  src: local("Archivo"), url("./assets/Archivo.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Code Pro", monospace;
+  src: local("SourceCodePro"),
+    url("./assets/SourceCodePro.woff2") format("woff2");
+}
+
+body {
+  overflow-x: hidden;
+  color: #161616;
+  background-color: #fefffa;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: justify;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 2vh 0 2vh 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  /* Make margin smaller on h2s */
+  margin: 5px 0 5px 0;
+}
+
+h2 a {
+  text-decoration: none;
+  color: #161616;
+  transition: 0.5s;
+}
+
+h2 a:hover {
+  color: #ff1b1b;
+  transition: ease-in;
+}
+
+ul li{
+  list-style:none;
+  display:inline-block;
+}
+
+
+li a {
+  font-family: "Archivo", sans-serif;
+  color: #ff1b1b;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  transform-origin: bottom;
+  transition: all 500ms cubic-bezier(0.075, 0.81, 0.165, 1);
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: calc(100% - 4px);
+  height: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 2px solid #161616;
+  border-right: 2px solid #161616;
+  transition: all 0.2s cubic-bezier(0.075, 0.81, 0.165, 1);
+}
+
+li a:hover:before {
+  background-color: transparent;
+  height: 100%;
+  transition: all 1s cubic-bezier(0.075, 0.81, 0.165, 1);
+}
+
+li a:hover {
+  letter-spacing: 4px;
+  color:#161616;
+}
+
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*END FONTS*/
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 48px 0 48px;
+  height: 150px;
+
+  background-color: #fefffa;
+  border-bottom: 2px solid #161616;
+}
+
+div.logo {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+
+  animation: bounce 3.9s linear infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    bottom: 2%;
+  }
+  25%,
+  75% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 10%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.logo img {
+  width: 50%;
+}
+
+section.hero {
+  height: 70vh;
+  width: 100%;
+  background-color: #fefffa;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.8),
+      rgba(131, 131, 131, 0.8)
+    ),
+    url("https://static1.squarespace.com/static/634570f7106a8752074b0d7f/t/63ea563ec223754a74b86103/1676301888064/shadow2.jpg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  border-bottom: 2px solid;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+section.hero div {
+  max-width: 450px;
+  background-color: #bfb5a9;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid;
+}
+
+section.hero img {
+  width: 400px;
+  border-radius: 5px;
+  border: 2px solid;
+}
+
+.button1,
+.button {
+  color: #fefffa;
+  background-color: #161616;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid;
+  transition: 0.5s;
+}
+
+.button1 {
+  z-index: 0;
+}
+
+.button {
+  max-height: 100px;
+  padding: 10px;
+}
+
+.button:hover,
+.button1:hover {
+  color: #161616;
+  background-color: #fefffa;
+  transition: all 0.5s ease-in-out;
+}
+
+section.main {
+  background-color: rgb(167, 167, 167);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  border-bottom: 2px solid;
+}
+.main img {
+  display: flex;
+  width: 33.3%;
+  flex-wrap: wrap;
+}
+
+.main img:nth-child(1),
+img:nth-child(2) {
+  border-right: 2px solid;
+}
+
+section.statements {
+  padding: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2vh;
+  border-bottom: 2px solid;
+}
+
+section.statements div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.statements img {
+  width: 100px;
+  border-radius: 10%;
+  border: 2px solid;
+}
+
+.end {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.8),
+      rgba(131, 131, 131, 0.8)
+    ),
+    url(https://static1.squarespace.com/static/634570f7106a8752074b0d7f/t/63ea5713d7d0434e0ddd2d15/1676302099836/shadow1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  padding: 0;
+  height: 50vh;
+}
+
+.end img {
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;
+  border: 2px solid;
+}
+
+.end img.bye {
+  width: 40px;
+  border: none;
+
+  /* Make hand wave  */
+  display: inline-block;
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  50% {
+    transform: rotate(100deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  height: 5vh;
+  width: 100%;
+  margin-left: 0%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  border-top: 2px solid #161616;
+}
+
+img.social {
+  max-width: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MEDIA QUERIES  */
+
+/* hide button on first section */
+@media screen and (min-width: 455px) {
+  .button1 {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  header {
+    padding: 0 10px 0 10px;
+  }
+
+  section.hero {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  section.hero img {
+    width: 60%;
+  }
+
+  .button1 {
+    display: flex;
+  }
+  /* make button link tiny on tiny screen */
+  .button {
+    max-height: 50px;
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav a {
+    display: flex;
+    flex-direction: column;
+    /* This aligns them to the horizontal axis.  */
+    align-items: space-evenly;
+  }
+
+  section.hero {
+    overflow: visible;
+    flex-wrap: nowrap;
+  }
+
+  section.hero div {
+    max-width: 90%;
+  }
+
+  section.hero,
+  section.main,
+  section.statements,
+  section.end {
+    flex-direction: column;
+  }
+
+  section.hero {
+    justify-content: space-evenly;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  section.end img {
+    width: 50%;
+    position: relative;
+    top: 0%;
+  }
+
+  .main img {
+    display: flex;
+    width: 100%;
+  }
+
+  .main img:nth-child(1),
+  img:nth-child(2) {
+    border-right: 0;
+    border-bottom: 2px solid;
+  }
+
+  .end {
+    padding-top: 20px;
+    align-items: center;
+  }
+
+  .end img.bye {
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin-bottom: 60px;
+  }
+}
+
+@media print {
+  header,
+  footer {
+    display: none;
+  }
+
+  /* hide background images for print */
+  section.hero,
+  section.end {
+    background-size: cover, 0, 0, auto;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  /* hide gradient for print */
+  section.hero {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(131, 131, 131, 0)
+    );
+  }
+}
+
+@page {
+  margin: 2cm;
+}
+
+/* make links visible in print */
+@media print {
+  a:after {
+    content: "(" attr(href) ")";
+  }
+}

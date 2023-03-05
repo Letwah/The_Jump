@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="form">
+      <h2>T-shirt Order Form</h2>
+      <form
+        method="POST"
+        action="https://us-central1-fir-ac2be.cloudfunctions.net/formReader"
+      >
+        <div>
+          <label for="title">Choose a title:</label>
+          <select name="title" id="title">
+            <option disabled selected>Please select</option>
+            <option value="Mrs">Mrs.</option>
+            <option value="Ms">Ms.</option>
+            <option value="Dr">Dr.</option>
+            <option value="Mr">Mr.</option>
+          </select>
+        </div>
+
+        <div>
+          <!-- way 1 -->
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="John Smith" />
+        </div>
+
+        <div>
+          <!-- way 1 -->
+          <label>
+            Email:
+            <input type="email" id="email" placeholder="eg: a@b.c" />
+          </label>
+        </div>
+
+        <div>
+          <p><label for="address">Address:</label></p>
+          <textarea
+            placeholder="full address here"
+            id="address"
+            name="address"
+            rows="4"
+            cols="50"
+          >
+          </textarea>
+        </div>
+
+        <div>
+          <fieldset>
+            <legend>Please choose size</legend>
+            <label for="xs">Extra Small</label>
+            <input type="radio" id="xs" name="size" value="xs" />
+            <label for="s">Small</label>
+            <input type="radio" id="s" name="size" value="s" />
+            <label for="m">Medium</label>
+            <input type="radio" id="m" name="size" value="m" />
+            <label for="l">Large</label>
+            <input type="radio" id="l" name="size" value="l" />
+            <label for="xl">Extra Large</label>
+            <input type="radio" id="xl" name="size" value="xl" />
+          </fieldset>
+        </div>
+
+        <div>
+          <fieldset>
+            <legend>Gender Style of t-shirt</legend>
+            <label for="male">Male (baggy/unisex)</label>
+            <input type="radio" id="male" name="gender" value="male" />
+
+            <label for="female">Female (fitted)</label>
+            <input type="radio" id="female" name="gender" value="female" />
+
+            <label for="long-sleeve">long-sleeve (unisex)</label>
+            <input
+              type="radio"
+              id="long-sleeve"
+              name="gender"
+              value="long-sleeve"
+            />
+          </fieldset>
+        </div>
+
+        <div>
+          <label for="tshirt">Choose a colour and pattern</label>
+          <select name="tshirt" multiple>
+            <optgroup label="Colour">
+              <option value="black">black</option>
+              <option value="white">white</option>
+              <option value="red">red</option>
+            </optgroup>
+
+            <optgroup label="Pattern">
+              <option value="dots">None (plain)</option>
+              <option value="dots">Dots</option>
+              <option value="frontlogo">Front Logo</option>
+              <option value="backlogo">Back Logo</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

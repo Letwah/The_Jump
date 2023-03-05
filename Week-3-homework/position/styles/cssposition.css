@@ -1,0 +1,42 @@
+.parent {
+  position: relative;
+  /* For absolute positioning of child-two, use any position other than static */
+  background-color: rgb(87, 210, 87);
+  color: black;
+  padding: 20px;
+  height: 200vh;
+}
+
+.child-one {
+  background-color: rgb(226, 233, 94);
+  position: relative;
+  /* acts exactly like static positioning but allows you to do 4 things 
+  static doesn't, allows you to change position of element 
+  RELATIVE to where it is in the document flow (top,left,bottom, right)*/
+  left: 10px;
+  top: 10px;
+}
+
+.child-two {
+  background-color: rgb(35, 192, 189);
+  position: absolute;
+  top: 0;
+  /*use ABSOLUTE to stick something in a particular 
+  position where you dont want anything else to move around it (acts independently 
+  of its siblings) 
+  When you use top etc here it is positioning it to the doc not the parent. 
+  To make it work you have to make its parent position:relative!! */
+}
+
+.child-three {
+  position: fixed;
+  /*fixed moves with the page when you scroll and stays in the exact same position on the page*/
+  background-color: rgb(171, 46, 94);
+}
+
+.child-four {
+  position: sticky;
+  top: 0;
+  /*combination of both relative and fixed to where ever you position it. As soon as it scrolls outside of the page it stays there*/
+  background-color: rgb(218, 80, 39);
+}

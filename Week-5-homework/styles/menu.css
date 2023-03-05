@@ -1,0 +1,99 @@
+/* the mechanics of tuning things off and on */
+.menu {
+  display: none;
+}
+
+.menu-container {
+  display: inline-block;
+}
+
+.menu-container:hover .menu {
+  display: initial;
+}
+
+.burger:hover {
+  fill: #83bb8d;
+}
+
+.burger {
+  margin:20px;
+  fill: rgb(12, 12, 12);
+}
+
+nav ul ul {
+  display: none;
+}
+
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+/* battle the styling */
+body {
+  font-family: "Courier New", Courier, monospace;
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+ul {
+  list-style-type: none;
+}
+nav {
+  background-color: #d7452f;
+  color: rgb(12, 12, 12);
+}
+nav ul li {
+  display: inline-block;
+  background-color: #83bb8d;
+}
+nav ul ul li {
+  display: list-item;
+  width: 170px;
+}
+nav ul ul {
+  position: absolute;
+  top: 50px;
+}
+a {
+  color: rgb(12, 12, 12);
+  text-decoration: none;
+  margin: 0;
+  padding: 0px;
+  line-height: 50px;
+  font-size: 16px;
+}
+
+nav ul {
+  position: relative;
+}
+nav a {
+  line-height: 40px;
+  padding: 10px;
+  display: block;
+}
+nav ul ul li {
+  width: 125px;
+  line-height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #859489;
+}
+
+/* very important */
+nav ul ul ul li {
+  position: relative;
+  top: 160px;
+  left: 80px;
+  background-color: #d5b8c0;
+}
+
+@media (min-width: 600px) {
+  .menu {
+    display: initial;
+  }
+  .burger {
+    display: none;
+  }
+}
