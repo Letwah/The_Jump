@@ -54,58 +54,12 @@ h2 a:hover {
   transition: ease-in;
 }
 
-ul li{
-  list-style:none;
-  display:inline-block;
-}
-
-
-li a {
+nav a {
   font-family: "Archivo", sans-serif;
   color: #ff1b1b;
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px;
-  transform-origin: bottom;
-  transition: all 500ms cubic-bezier(0.075, 0.81, 0.165, 1);
-}
-
-a:before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: calc(100% - 4px);
-  height: 0;
-  right: 0;
-  bottom: 0;
-  border-left: 2px solid #161616;
-  border-right: 2px solid #161616;
-  transition: all 0.2s cubic-bezier(0.075, 0.81, 0.165, 1);
-}
-
-li a:hover:before {
-  background-color: transparent;
-  height: 100%;
-  transition: all 1s cubic-bezier(0.075, 0.81, 0.165, 1);
-}
-
-li a:hover {
-  letter-spacing: 4px;
-  color:#161616;
-}
-
-
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 /*END FONTS*/
@@ -135,24 +89,6 @@ div.logo {
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
-
-  animation: bounce 3.9s linear infinite;
-}
-
-@-webkit-keyframes bounce {
-  0% {
-    bottom: 2%;
-  }
-  25%,
-  75% {
-    bottom: 5%;
-  }
-  50% {
-    bottom: 10%;
-  }
-  100% {
-    bottom: 0;
-  }
 }
 
 .logo img {
@@ -220,7 +156,7 @@ section.hero img {
 .button1:hover {
   color: #161616;
   background-color: #fefffa;
-  transition: all 0.5s ease-in-out;
+  transition: all;
 }
 
 section.main {
